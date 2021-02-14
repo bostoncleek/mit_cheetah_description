@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10.2)
+project(mit_cheetah_description)
+find_package(catkin REQUIRED)
+catkin_package()
+install(DIRECTORY launch/ DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+install(DIRECTORY config/ DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config)
+install(DIRECTORY urdf/ DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf)
