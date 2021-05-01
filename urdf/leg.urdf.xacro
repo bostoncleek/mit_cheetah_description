@@ -68,6 +68,17 @@
             </inertial>
         </link>
        
+        <link name="${name}_hip0">
+            <origin rpy="0 0 0" xyz="${hip_com_x*front_hind} ${hip_com_y*mirror} ${hip_com_z}"/>
+        </link>
+
+        <joint name="${name}_hip_joint0" type="fixed">
+            <xacro:insert_block name="origin"/>
+            <parent link="trunk"/>
+            <child link="${name}_hip0"/>
+        </joint>
+
+
     <!-- //////////////////////thigh//////////////////// -->
         <joint name="${name}_thigh_joint" type="revolute">
         <!-- <joint name="${name}_thigh_joint" type="continuous"> -->
